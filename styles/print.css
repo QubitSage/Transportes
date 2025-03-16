@@ -1,0 +1,38 @@
+@media print {
+  /* Reset visibility */
+  body * {
+    visibility: visible !important;
+  }
+
+  /* Hide non-printable elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Preserve background colors and shadows */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ensure white background */
+  body {
+    background: white !important;
+  }
+
+  /* Maintain card appearance */
+  .print-content {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1) !important;
+    border-radius: 0.5rem !important;
+    background: white !important;
+    margin: 1rem !important;
+    padding: 1.5rem !important;
+  }
+
+  /* Adjust page margins */
+  @page {
+    margin: 0;
+    size: auto;
+  }
+}
+
